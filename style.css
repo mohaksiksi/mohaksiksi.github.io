@@ -1,0 +1,334 @@
+/* Importation d'une police professionnelle et élégante (ex: Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* --- Variables et Réinitialisation de base --- */
+:root {
+    --couleur-primaire: #4a2c2a; /* Brun foncé riche pour le grain de café */
+    --couleur-secondaire: #a17a5c; /* Brun clair/caramel pour l'accent */
+    --couleur-texte: #333;
+    --couleur-fond: #f8f7f5; /* Fond très légèrement cassé */
+    --couleur-blanc: #ffffff;
+    --font-principale: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principale);
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-primaire);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--couleur-secondaire);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header et Navigation --- */
+.main-header {
+    background-color: var(--couleur-blanc);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--couleur-primaire);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: var(--couleur-texte);
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: var(--couleur-secondaire);
+    border-bottom: 2px solid var(--couleur-secondaire);
+}
+
+.btn-panier {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-blanc);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-panier:hover {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc); /* Assure la couleur du texte blanc */
+}
+
+/* --- Boutons Génériques --- */
+.btn-principal, .btn-secondaire {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-principal {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    border: 2px solid var(--couleur-primaire);
+}
+
+.btn-principal:hover {
+    background-color: var(--couleur-secondaire);
+    border-color: var(--couleur-secondaire);
+}
+
+.btn-secondaire {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-primaire);
+    border: 1px solid var(--couleur-primaire);
+}
+
+.btn-secondaire:hover {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+}
+
+/* --- Sections --- */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 300; /* Mince pour un aspect luxe/moderne */
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--couleur-primaire);
+}
+
+/* --- Section Héro (Accueil) --- */
+.hero-section {
+    background-color: #e8e6e3; /* Une couleur crème subtile */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh;
+    padding-top: 100px; /* Espace pour le header sticky */
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--couleur-primaire);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--couleur-texte);
+}
+
+.hero-section >  {
+    max-width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Section Produits --- */
+.product-section {
+    background-color: var(--couleur-blanc);
+}
+
+.product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--couleur-primaire);
+}
+
+.product-card .price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--couleur-secondaire);
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+/* --- Section Histoire --- */
+.story-section {
+    background-color: var(--couleur-fond);
+    text-align: center;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.story-section >  {
+    max-width: 600px;
+    margin: 30px auto 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+.main-footer p {
+    margin-bottom: 10px;
+}
+
+.main-footer a {
+    color: var(--couleur-secondaire);
+}
+
+.main-footer a:hover {
+    color: var(--couleur-blanc);
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--couleur-blanc);
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: var(--couleur-secondaire);
+}
+
+/* --- Responsive (pour la preuve de maîtrise) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 2; /* Met le contenu en bas sur mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section >  {
+        max-width: 80%;
+        margin-bottom: 30px;
+        order: 1; /* Met l'image en haut sur mobile */
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        max-width: 90%;
+    }
+}
