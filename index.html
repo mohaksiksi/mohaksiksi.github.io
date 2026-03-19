@@ -22,11 +22,9 @@
       min-height: 100vh;
     }
 
-    /* ── PAGES ── */
     .page { display: none; }
     .page.active { display: block; }
 
-    /* ── NAVBAR ── */
     nav {
       position: sticky; top: 0; z-index: 1000;
       display: flex; justify-content: center; flex-wrap: wrap;
@@ -49,7 +47,6 @@
       nav a { font-size: 0.72em; padding: 5px 8px; flex-shrink: 0; }
     }
 
-    /* ── HEADER ── */
     header {
       background: #2c3e50; color: white;
       padding: 120px 20px 80px; text-align: center;
@@ -81,10 +78,7 @@
     }
     .header-sub { font-size: 1.1em; color: rgba(255,255,255,0.8); font-weight: 300; }
 
-    /* ── PAGE HEADER (sous-pages) ── */
-    .page-header {
-      color: white; padding: 50px 20px; text-align: center;
-    }
+    .page-header { color: white; padding: 50px 20px; text-align: center; }
     .page-header h1 { font-size: 2.5em; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
     .page-header p  { font-size: 1em; opacity: 0.8; }
     .ph-presentation { background: linear-gradient(135deg, #2c3e50, #2980b9); }
@@ -94,10 +88,8 @@
     .ph-profil       { background: linear-gradient(135deg, #0e6655, #16a085); }
     .ph-veille       { background: linear-gradient(135deg, #1a237e, #e74c3c); }
 
-    /* ── CONTAINER ── */
     .container { max-width: 1100px; margin: 30px auto; padding: 0 20px 40px; }
 
-    /* ── SECTIONS ── */
     section {
       background: white; padding: 30px; margin-bottom: 25px;
       border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -105,11 +97,10 @@
     }
     h2 { font-size: 1.8em; color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; margin-bottom: 24px; }
 
-    /* ── REVEAL ── */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── HOME CARDS ── */
+    /* HOME CARDS */
     .home-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px; max-width: 1100px; margin: 40px auto; padding: 0 20px 40px;
@@ -118,15 +109,13 @@
       background: white; border-radius: 12px; padding: 30px 24px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       border: 1px solid #eee; border-top: 4px solid #2980b9;
-      transition: all 0.3s; display: flex; flex-direction: column; gap: 12px;
-      cursor: pointer; text-decoration: none;
+      transition: all 0.3s; display: flex; flex-direction: column; gap: 12px; cursor: pointer;
     }
     .home-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(41,128,185,0.15); }
     .home-card-icon  { font-size: 2.2em; }
     .home-card-title { font-size: 1.15em; font-weight: 700; color: #2c3e50; }
     .home-card-desc  { font-size: 0.88em; color: #666; line-height: 1.6; }
     .home-card-arrow { font-size: 1.2em; color: #2980b9; align-self: flex-end; margin-top: auto; }
-    .home-card:nth-child(1) { border-top-color: #2980b9; }
     .home-card:nth-child(2) { border-top-color: #27ae60; }
     .home-card:nth-child(2) .home-card-arrow { color: #27ae60; }
     .home-card:nth-child(3) { border-top-color: #e67e22; }
@@ -138,7 +127,7 @@
     .home-card:nth-child(6) { border-top-color: #e74c3c; }
     .home-card:nth-child(6) .home-card-arrow { color: #e74c3c; }
 
-    /* ── PRÉSENTATION ── */
+    /* PRÉSENTATION */
     .intro-section { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
     .intro-image-container { flex: 0 0 280px; text-align: center; }
     .pp2moi { width: 280px; height: 280px; object-fit: cover; object-position: 15% center; border-radius: 10px; border: 3px solid #e0eaf5; }
@@ -157,7 +146,7 @@
     .formation-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.1em; }
     .formation-card p { color: #555; margin-bottom: 8px; }
 
-    /* ── COMPÉTENCES ── */
+    /* COMPÉTENCES */
     #skills-bg { background-size: cover; background-position: center; background-image: url('https://image.pollinations.ai/prompt/digital-grid-tech'); }
     #skills-bg::before { content: ''; position: absolute; inset: 0; background: rgba(44,62,80,0.88); z-index: 1; }
     #skills-bg .content { position: relative; z-index: 2; }
@@ -182,7 +171,7 @@
     .chiffre-number { font-size: 2.5em; font-weight: 700; color: #2980b9; line-height: 1; }
     .chiffre-label { font-size: 0.85em; color: #555; margin-top: 8px; }
 
-    /* ── EXPÉRIENCE ── */
+    /* EXPÉRIENCE */
     .ratp-header { display: flex; align-items: center; gap: 16px; background: #f8fafd; border: 1px solid #e0eaf5; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
     .ratp-logo { font-size: 2.5em; flex-shrink: 0; }
     .ratp-info h3 { margin: 0 0 4px; color: #2c3e50; font-size: 1.1em; }
@@ -212,7 +201,7 @@
     .score-green { background: #e8f5e9; color: #2e7d32; }
     .score-blue  { background: #e3f2fd; color: #1565c0; }
 
-    /* ── PROJETS ── */
+    /* PROJETS */
     .project-fiche { border: 1px solid #eee; border-radius: 10px; padding: 20px; margin-bottom: 14px; transition: 0.25s; }
     .project-fiche:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #2980b9; }
     .project-fiche-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
@@ -233,7 +222,7 @@
     .project-accent-purple { border-left: 5px solid #8e44ad; }
     .project-accent-teal   { border-left: 5px solid #16a085; }
 
-    /* ── PROFIL ── */
+    /* PROFIL */
     .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .about-card { background: #fdfdfd; border: 1px solid #eee; border-radius: 10px; padding: 22px; }
     .about-card h3 { font-size: 1em; font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
@@ -264,25 +253,25 @@
     .interet-nom  { font-weight: 700; font-size: 0.88em; color: #2c3e50; margin-bottom: 4px; }
     .interet-desc { font-size: 0.75em; color: #666; }
 
-    /* ── VEILLE ── */
+    /* VEILLE */
     .veille-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .veille-card { background: #ffffff; border: 2px solid #eef2f6; border-radius: 12px; padding: 25px; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
     .veille-card:hover { transform: translateY(-8px); border-color: #2980b9; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    .veille-card h3 { color: #2c3e50; font-size: 1.2em; }
-    .veille-card p { font-size: 0.9em; color: #666; flex: 1; }
+    .veille-card h3 { color: #2c3e50; font-size: 1.1em; }
+    .veille-card p { font-size: 0.88em; color: #666; flex: 1; }
     .source-badge { font-size: 0.7em; font-weight: bold; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; align-self: center; }
-    .badge-fr { background: #e3f2fd; color: #1976d2; }
+    .badge-fr   { background: #e3f2fd; color: #1976d2; }
+    .badge-year { background: #f3e5f5; color: #6a1b9a; }
     .btn-news { background: #2980b9; color: white !important; padding: 10px 20px; border-radius: 8px; text-decoration: none !important; font-size: 0.9em; font-weight: bold; transition: 0.3s; }
     .btn-news:hover { background: #1a5276; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { text-align: center; padding: 30px 20px; background: #2c3e50; color: #ecf0f1; }
     .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
     .footer-links a { color: #bdc3c7; text-decoration: none; font-size: 0.9em; transition: color 0.2s; }
     .footer-links a:hover { color: #2980b9; }
     .footer-copy { font-size: 0.82em; color: #95a5a6; }
 
-    /* ── BOUTON RETOUR ── */
     #back-to-top {
       position: fixed; bottom: 30px; right: 30px; z-index: 999;
       background: #2980b9; color: white; border: none; border-radius: 50%;
@@ -293,7 +282,6 @@
     #back-to-top:hover { background: #1a5276; transform: translateY(-3px); }
     #back-to-top.visible { display: flex; }
 
-    /* ── PROGRESS BAR ── */
     #progress-bar {
       position: fixed; top: 0; left: 0; z-index: 2000;
       height: 3px; width: 0%;
@@ -307,7 +295,6 @@
 <div id="progress-bar"></div>
 <button id="back-to-top" title="Retour en haut">↑</button>
 
-<!-- ── NAVBAR ── -->
 <nav>
   <a onclick="showPage('home')"         data-page="home">🏠 Accueil</a>
   <a onclick="showPage('presentation')" data-page="presentation">Présentation</a>
@@ -318,9 +305,9 @@
   <a onclick="showPage('veille')"       data-page="veille">Veille</a>
 </nav>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : ACCUEIL
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-home" class="page active">
   <header>
     <div class="carousel-container">
@@ -334,7 +321,6 @@
       <p class="header-sub">Étudiant en BTS SIO SISR | Admin Réseau & Cybersécurité | Alternance RATP</p>
     </div>
   </header>
-
   <div class="home-grid">
     <div class="home-card" onclick="showPage('presentation')">
       <div class="home-card-icon">👤</div>
@@ -369,11 +355,10 @@
     <div class="home-card" onclick="showPage('veille')">
       <div class="home-card-icon">📡</div>
       <div class="home-card-title">Veille Technologique</div>
-      <div class="home-card-desc">Ma veille sur l'IA et l'évolution des véhicules électriques.</div>
+      <div class="home-card-desc">Ma veille sur l'IA et l'évolution des véhicules électriques — 10 articles de 2020 à 2025.</div>
       <div class="home-card-arrow">→</div>
     </div>
   </div>
-
   <footer>
     <div class="footer-links">
       <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
@@ -384,16 +369,15 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : PRÉSENTATION
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-presentation" class="page">
   <div class="page-header ph-presentation">
     <h1>👤 Présentation</h1>
     <p>Qui je suis · Mon parcours · Ma formation</p>
   </div>
   <div class="container">
-
     <section class="reveal">
       <h2>Présentation</h2>
       <div class="intro-section">
@@ -407,7 +391,6 @@
         </div>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Mon Parcours Académique</h2>
       <ul class="timeline">
@@ -417,7 +400,6 @@
         <li><strong>2024 – Aujourd'hui</strong><br>UTEC Marne-la-Vallée — <strong>BTS SIO SISR</strong> (Alternance)</li>
       </ul>
     </section>
-
     <section class="reveal">
       <h2>Ma Formation Actuelle</h2>
       <div class="formation-card">
@@ -426,7 +408,6 @@
         <p>Je réalise mon alternance à la <strong>RATP</strong>, au sein du service <strong>Proximité Data Center</strong>, au rythme d'<strong>1 semaine sur 2</strong>.</p>
       </div>
     </section>
-
   </div>
   <footer>
     <div class="footer-links">
@@ -438,16 +419,15 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : COMPÉTENCES
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-competences" class="page">
   <div class="page-header ph-competences">
     <h1>🛠️ Compétences</h1>
     <p>Techniques · Outils · Chiffres clés</p>
   </div>
   <div class="container">
-
     <section id="skills-bg" class="reveal">
       <div class="content">
         <h2>Compétences Techniques</h2>
@@ -462,7 +442,6 @@
         </table>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Outils & Environnements</h2>
       <div class="tools-grid">
@@ -475,7 +454,6 @@
         <div class="tool-card"><div class="tool-icon">⚙️</div><div class="tool-name">Proxmox</div><div class="tool-desc">Virtualisation serveur</div></div>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Chiffres Clés</h2>
       <div class="chiffres-grid">
@@ -487,7 +465,6 @@
         <div class="chiffre-card"><div class="chiffre-number">7</div><div class="chiffre-label">Outils & environnements maîtrisés</div></div>
       </div>
     </section>
-
   </div>
   <footer>
     <div class="footer-links">
@@ -499,16 +476,15 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : EXPÉRIENCE
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-experience" class="page">
   <div class="page-header ph-experience">
     <h1>🚇 Expérience</h1>
     <p>Alternance RATP · Missions · Certifications</p>
   </div>
   <div class="container">
-
     <section class="reveal">
       <h2>Alternance – RATP</h2>
       <div class="ratp-header">
@@ -527,7 +503,6 @@
         <div class="mission-card"><h4>🗄️ Gestion de câblage & baies</h4><p>Organisation et documentation du câblage en baies de brassage, étiquetage et mise à jour des schémas réseau.</p></div>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Mes Certifications</h2>
       <div class="cert-container">
@@ -579,7 +554,6 @@
         </div>
       </div>
     </section>
-
   </div>
   <footer>
     <div class="footer-links">
@@ -591,9 +565,9 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : PROJETS
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-projets" class="page">
   <div class="page-header ph-projets">
     <h1>💻 Projets</h1>
@@ -602,7 +576,6 @@
   <div class="container">
     <section class="reveal">
       <h2>Fiches Projets</h2>
-
       <div class="project-fiche project-accent-blue">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -617,7 +590,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-orange">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -632,7 +604,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-purple">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -647,7 +618,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-teal">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -663,7 +633,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
     </section>
   </div>
   <footer>
@@ -676,16 +645,15 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : PROFIL
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-profil" class="page">
   <div class="page-header ph-profil">
     <h1>🌍 Profil</h1>
     <p>À propos · Langues · Intérêts · Objectifs</p>
   </div>
   <div class="container">
-
     <section class="reveal">
       <h2>À Propos</h2>
       <p style="color:#555;margin-bottom:20px;">Étudiant passionné par l'administration réseau et la cybersécurité, actuellement en deuxième année de BTS SIO option SISR au CFA UTEC. Je suis également un grand passionné de <strong>football</strong> et je porte un vif intérêt pour le <strong>management</strong>.</p>
@@ -710,7 +678,6 @@
         </div>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Objectifs Professionnels</h2>
       <div class="objectif-card">
@@ -726,16 +693,14 @@
         <p>Poursuivre mes études après le BTS en intégrant une Licence MIAGE afin d'élargir mes compétences en informatique de gestion, systèmes d'information et management des projets SI.</p>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Langues</h2>
       <div class="langues-grid">
         <div class="langue-card"><div class="langue-flag">🇫🇷</div><div class="langue-nom">Français</div><span class="langue-niveau niveau-natif">Langue natale</span></div>
-        <div class="langue-card"><div class="langue-flag">🇲🇦</div><div class="langue-nom">Arabe</div><span class="langue-niveau niveau-courant">Courant</span></div>
+        <div class="langue-card"><div class="langue-flag">🇹🇳</div><div class="langue-nom">Arabe</div><span class="langue-niveau niveau-courant">Courant</span></div>
         <div class="langue-card"><div class="langue-flag">🇬🇧</div><div class="langue-nom">Anglais</div><span class="langue-niveau niveau-scolaire">Scolaire / Technique</span></div>
       </div>
     </section>
-
     <section class="reveal">
       <h2>Centres d'Intérêt</h2>
       <div class="interets-grid">
@@ -747,7 +712,6 @@
         <div class="interet-card"><div class="interet-icon">📱</div><div class="interet-nom">Veille Tech</div><div class="interet-desc">Actualités IT & innovations</div></div>
       </div>
     </section>
-
   </div>
   <footer>
     <div class="footer-links">
@@ -759,36 +723,89 @@
   </footer>
 </div>
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════
      PAGE : VEILLE
-════════════════════════════════════════ -->
+══════════════════════════════ -->
 <div id="page-veille" class="page">
   <div class="page-header ph-veille">
     <h1>📡 Veille Technologique</h1>
-    <p>IA & Véhicules Électriques · Sources · Analyses</p>
+    <p>IA & Véhicules Électriques · 10 articles · 2020 – 2025</p>
   </div>
   <div class="container">
     <section class="reveal">
       <h2>L'IA et l'évolution des Véhicules Électriques</h2>
       <div class="veille-grid">
+
         <div class="veille-card">
-          <span class="source-badge badge-fr">Actualité FR</span>
-          <h3>Presse-Citron</h3>
-          <p>L'IA au cœur de l'autonomie : comment les algorithmes optimisent la consommation d'énergie en temps réel.</p>
-          <a href="https://www.presse-citron.net/lintelligence-artificielle-va-t-elle-sauver-lautonomie-des-voitures-electriques/" target="_blank" class="btn-news">Lire l'article</a>
+          <span class="source-badge badge-year">2020</span>
+          <h3>EDF — La voiture électrique du futur</h3>
+          <p>Présentation des premières technologies de recharge intelligente (V1G/V2G) et de la conduite autonome assistée par IA.</p>
+          <a href="https://particulier.edf.fr/fr/accueil/guide-energie/electricite/future-voiture-electrique.html" target="_blank" class="btn-news">Lire l'article</a>
         </div>
+
         <div class="veille-card">
-          <span class="source-badge badge-fr">Tech FR</span>
-          <h3>Les Numériques</h3>
-          <p>L'évolution des batteries grâce à l'IA : prédire l'usure et accélérer les temps de recharge intelligente.</p>
-          <a href="https://www.lesnumeriques.com/voiture/l-ia-au-service-de-la-batterie-des-voitures-electriques-n216527.html" target="_blank" class="btn-news">Consulter l'analyse</a>
+          <span class="source-badge badge-year">2021</span>
+          <h3>BNP Paribas — L'IA dans l'automobile</h3>
+          <p>Honda commercialise le premier système de conduite autonome de niveau 3 au Japon, suivi de Mercedes en Allemagne.</p>
+          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
+
         <div class="veille-card">
-          <span class="source-badge badge-fr">Science FR</span>
-          <h3>Futura-Sciences</h3>
-          <p>Vers le véhicule 100% logiciel : quand l'IA transforme la voiture électrique en un terminal intelligent mobile.</p>
-          <a href="https://www.futura-sciences.com/tech/actualites/smart-city-ia-va-transformer-radicalement-notre-facon-conduire-111054/" target="_blank" class="btn-news">Voir le dossier</a>
+          <span class="source-badge badge-year">2022</span>
+          <h3>Daze — 7 avantages de l'IA dans les VE</h3>
+          <p>Depuis juillet 2022, certains systèmes d'aide à la conduite basés sur l'IA sont obligatoires pour les nouveaux véhicules homologués dans l'UE.</p>
+          <a href="https://www.daze.eu/fr-be/blog/intelligence-artificielle-ev-avantages" target="_blank" class="btn-news">Lire l'article</a>
         </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2022</span>
+          <h3>Beev — L'avenir de l'IA dans l'automobile propre</h3>
+          <p>Le rapport de sécurité Tesla T4 2022 montre que l'Autopilot réduit drastiquement les accidents grâce à l'IA embarquée.</p>
+          <a href="https://www.beev.co/blog/voitures-electriques/quel-avenir-pour-lintelligence-artificielle-dans-lautomobile-propre/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2023</span>
+          <h3>BNP Paribas — Honda/Sony lancent Afeela</h3>
+          <p>Le prototype Afeela embarque 45 capteurs (LiDARs, caméras) et une plateforme numérique pilotée par l'IA connectée en 5G.</p>
+          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2023</span>
+          <h3>BPI France — L'IA, moteur de la révolution automobile</h3>
+          <p>Les algorithmes de machine learning analysent les habitudes de conduite pour réduire la consommation et personnaliser l'expérience utilisateur.</p>
+          <a href="https://bigmedia.bpifrance.fr/nos-dossiers/lia-moteur-de-la-revolution-du-secteur-automobile" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2024</span>
+          <h3>BNP Paribas — Marché de la voiture autonome</h3>
+          <p>Le marché des véhicules autonomes est estimé à 41 milliards de dollars en 2024, avec une croissance de 22,75 % prévue jusqu'en 2029.</p>
+          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2024</span>
+          <h3>BNP Paribas — Volkswagen investit 122 milliards</h3>
+          <p>Volkswagen annonce un budget colossal pour l'électrification et la digitalisation, avec l'IA au cœur de sa stratégie industrielle.</p>
+          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2025</span>
+          <h3>Automobile Propre — IA et autonomie en temps réel</h3>
+          <p>Des chercheurs développent un modèle IA capable d'estimer l'autonomie restante d'un VE en analysant topographie, météo, vitesse et état de la batterie.</p>
+          <a href="https://www.automobile-propre.com/articles/autonomie-des-voitures-electriques-cette-ia-promet-des-estimations-beaucoup-plus-fiables-que-le-wltp/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">2025</span>
+          <h3>Automobile Propre — L'IA dessine les futurs VE</h3>
+          <p>L'IA générative s'invite dans le processus de conception des voitures électriques, transformant le design et l'ingénierie automobile de demain.</p>
+          <a href="https://www.automobile-propre.com/articles/les-prochaines-voitures-electriques-vont-elles-etre-dessinees-par-lia/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
       </div>
     </section>
   </div>
@@ -804,17 +821,12 @@
 
 <script>
   function showPage(name) {
-    // Cacher toutes les pages
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    // Afficher la page demandée
     document.getElementById('page-' + name).classList.add('active');
-    // Mettre à jour la navbar
     document.querySelectorAll('nav a').forEach(a => {
       a.classList.toggle('active', a.dataset.page === name);
     });
-    // Remonter en haut
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Relancer les animations reveal
     setTimeout(() => {
       document.querySelectorAll('#page-' + name + ' .reveal').forEach(el => {
         el.classList.remove('visible');
@@ -836,20 +848,22 @@
     reveals.forEach(el => observer.observe(el));
   }
 
-  // Initialiser la page d'accueil
   triggerReveal('home');
 
-  // Barre de progression
+  const bar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    document.getElementById('progress-bar').style.width = (scrollTop / docHeight * 100) + '%';
+    bar.style.width = (scrollTop / docHeight * 100) + '%';
   });
 
-  // Bouton retour en haut
   const btn = document.getElementById('back-to-top');
   window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
