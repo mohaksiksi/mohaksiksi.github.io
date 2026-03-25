@@ -100,7 +100,6 @@
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* HOME CARDS */
     .home-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px; max-width: 1100px; margin: 40px auto; padding: 0 20px 40px;
@@ -127,7 +126,6 @@
     .home-card:nth-child(6) { border-top-color: #e74c3c; }
     .home-card:nth-child(6) .home-card-arrow { color: #e74c3c; }
 
-    /* PRÉSENTATION */
     .intro-section { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
     .intro-image-container { flex: 0 0 280px; text-align: center; }
     .pp2moi { width: 280px; height: 280px; object-fit: cover; object-position: 15% center; border-radius: 10px; border: 3px solid #e0eaf5; }
@@ -146,7 +144,6 @@
     .formation-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.1em; }
     .formation-card p { color: #555; margin-bottom: 8px; }
 
-    /* COMPÉTENCES */
     #skills-bg { background-size: cover; background-position: center; background-image: url('https://image.pollinations.ai/prompt/digital-grid-tech'); }
     #skills-bg::before { content: ''; position: absolute; inset: 0; background: rgba(44,62,80,0.88); z-index: 1; }
     #skills-bg .content { position: relative; z-index: 2; }
@@ -171,7 +168,6 @@
     .chiffre-number { font-size: 2.5em; font-weight: 700; color: #2980b9; line-height: 1; }
     .chiffre-label { font-size: 0.85em; color: #555; margin-top: 8px; }
 
-    /* EXPÉRIENCE */
     .ratp-header { display: flex; align-items: center; gap: 16px; background: #f8fafd; border: 1px solid #e0eaf5; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
     .ratp-logo { font-size: 2.5em; flex-shrink: 0; }
     .ratp-info h3 { margin: 0 0 4px; color: #2c3e50; font-size: 1.1em; }
@@ -201,7 +197,6 @@
     .score-green { background: #e8f5e9; color: #2e7d32; }
     .score-blue  { background: #e3f2fd; color: #1565c0; }
 
-    /* PROJETS */
     .project-fiche { border: 1px solid #eee; border-radius: 10px; padding: 20px; margin-bottom: 14px; transition: 0.25s; }
     .project-fiche:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #2980b9; }
     .project-fiche-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
@@ -221,8 +216,10 @@
     .project-accent-orange { border-left: 5px solid #e67e22; }
     .project-accent-purple { border-left: 5px solid #8e44ad; }
     .project-accent-teal   { border-left: 5px solid #16a085; }
+    .project-accent-red    { border-left: 5px solid #e74c3c; }
 
-    /* PROFIL */
+    .project-img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-top: 14px; border: 1px solid #eee; }
+
     .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .about-card { background: #fdfdfd; border: 1px solid #eee; border-radius: 10px; padding: 22px; }
     .about-card h3 { font-size: 1em; font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
@@ -253,7 +250,6 @@
     .interet-nom  { font-weight: 700; font-size: 0.88em; color: #2c3e50; margin-bottom: 4px; }
     .interet-desc { font-size: 0.75em; color: #666; }
 
-    /* VEILLE */
     .veille-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .veille-card { background: #ffffff; border: 2px solid #eef2f6; border-radius: 12px; padding: 25px; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
     .veille-card:hover { transform: translateY(-8px); border-color: #2980b9; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
@@ -265,7 +261,6 @@
     .btn-news { background: #2980b9; color: white !important; padding: 10px 20px; border-radius: 8px; text-decoration: none !important; font-size: 0.9em; font-weight: bold; transition: 0.3s; }
     .btn-news:hover { background: #1a5276; }
 
-    /* FOOTER */
     footer { text-align: center; padding: 30px 20px; background: #2c3e50; color: #ecf0f1; }
     .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
     .footer-links a { color: #bdc3c7; text-decoration: none; font-size: 0.9em; transition: color 0.2s; }
@@ -305,9 +300,7 @@
   <a onclick="showPage('veille')"       data-page="veille">Veille</a>
 </nav>
 
-<!-- ══════════════════════════════
-     PAGE : ACCUEIL
-══════════════════════════════ -->
+<!-- PAGE : ACCUEIL -->
 <div id="page-home" class="page active">
   <header>
     <div class="carousel-container">
@@ -369,9 +362,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : PRÉSENTATION
-══════════════════════════════ -->
+<!-- PAGE : PRÉSENTATION -->
 <div id="page-presentation" class="page">
   <div class="page-header ph-presentation">
     <h1>👤 Présentation</h1>
@@ -419,9 +410,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : COMPÉTENCES
-══════════════════════════════ -->
+<!-- PAGE : COMPÉTENCES -->
 <div id="page-competences" class="page">
   <div class="page-header ph-competences">
     <h1>🛠️ Compétences</h1>
@@ -476,9 +465,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : EXPÉRIENCE
-══════════════════════════════ -->
+<!-- PAGE : EXPÉRIENCE -->
 <div id="page-experience" class="page">
   <div class="page-header ph-experience">
     <h1>🚇 Expérience</h1>
@@ -565,9 +552,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : PROJETS
-══════════════════════════════ -->
+<!-- PAGE : PROJETS -->
 <div id="page-projets" class="page">
   <div class="page-header ph-projets">
     <h1>💻 Projets</h1>
@@ -576,6 +561,7 @@
   <div class="container">
     <section class="reveal">
       <h2>Fiches Projets</h2>
+
       <div class="project-fiche project-accent-blue">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -590,6 +576,7 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
+
       <div class="project-fiche project-accent-orange">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -604,6 +591,7 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
+
       <div class="project-fiche project-accent-purple">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -618,6 +606,7 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
+
       <div class="project-fiche project-accent-teal">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -632,7 +621,26 @@
           </div>
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
+        <img src="Capture_d_écran_2026-03-24_150601.png" alt="Dashboard Pi-hole" class="project-img">
       </div>
+
+      <div class="project-fiche project-accent-red">
+        <div class="project-fiche-inner">
+          <div style="flex:1">
+            <h3>Caméra IP – Surveillance Tapo C222</h3>
+            <p>Installation et configuration d'une caméra IP Tapo C222 en salle de classe, avec gestion du flux vidéo en temps réel, panoramique & inclinaison, et accès distant via l'application mobile.</p>
+            <div class="project-tags">
+              <span class="tag tag-red">Tapo C222</span>
+              <span class="tag tag-blue">IP Camera</span>
+              <span class="tag tag-orange">Surveillance</span>
+              <span class="tag tag-green">Réseau</span>
+            </div>
+          </div>
+          <span class="status-badge status-done">✅ Réalisé</span>
+        </div>
+        <img src="IMG_7431.png" alt="Caméra Tapo C222 en classe" class="project-img">
+      </div>
+
     </section>
   </div>
   <footer>
@@ -645,9 +653,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : PROFIL
-══════════════════════════════ -->
+<!-- PAGE : PROFIL -->
 <div id="page-profil" class="page">
   <div class="page-header ph-profil">
     <h1>🌍 Profil</h1>
@@ -723,9 +729,7 @@
   </footer>
 </div>
 
-<!-- ══════════════════════════════
-     PAGE : VEILLE
-══════════════════════════════ -->
+<!-- PAGE : VEILLE -->
 <div id="page-veille" class="page">
   <div class="page-header ph-veille">
     <h1>📡 Veille Technologique</h1>
@@ -735,77 +739,66 @@
     <section class="reveal">
       <h2>L'IA et l'évolution des Véhicules Électriques</h2>
       <div class="veille-grid">
-
         <div class="veille-card">
           <span class="source-badge badge-year">2020</span>
           <h3>EDF — La voiture électrique du futur</h3>
           <p>Présentation des premières technologies de recharge intelligente (V1G/V2G) et de la conduite autonome assistée par IA.</p>
           <a href="https://particulier.edf.fr/fr/accueil/guide-energie/electricite/future-voiture-electrique.html" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2021</span>
           <h3>BNP Paribas — L'IA dans l'automobile</h3>
           <p>Honda commercialise le premier système de conduite autonome de niveau 3 au Japon, suivi de Mercedes en Allemagne.</p>
           <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2022</span>
           <h3>Daze — 7 avantages de l'IA dans les VE</h3>
           <p>Depuis juillet 2022, certains systèmes d'aide à la conduite basés sur l'IA sont obligatoires pour les nouveaux véhicules homologués dans l'UE.</p>
           <a href="https://www.daze.eu/fr-be/blog/intelligence-artificielle-ev-avantages" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2022</span>
           <h3>Beev — L'avenir de l'IA dans l'automobile propre</h3>
           <p>Le rapport de sécurité Tesla T4 2022 montre que l'Autopilot réduit drastiquement les accidents grâce à l'IA embarquée.</p>
           <a href="https://www.beev.co/blog/voitures-electriques/quel-avenir-pour-lintelligence-artificielle-dans-lautomobile-propre/" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2023</span>
           <h3>BNP Paribas — Honda/Sony lancent Afeela</h3>
           <p>Le prototype Afeela embarque 45 capteurs (LiDARs, caméras) et une plateforme numérique pilotée par l'IA connectée en 5G.</p>
           <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2023</span>
           <h3>BPI France — L'IA, moteur de la révolution automobile</h3>
           <p>Les algorithmes de machine learning analysent les habitudes de conduite pour réduire la consommation et personnaliser l'expérience utilisateur.</p>
           <a href="https://bigmedia.bpifrance.fr/nos-dossiers/lia-moteur-de-la-revolution-du-secteur-automobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2024</span>
           <h3>BNP Paribas — Marché de la voiture autonome</h3>
           <p>Le marché des véhicules autonomes est estimé à 41 milliards de dollars en 2024, avec une croissance de 22,75 % prévue jusqu'en 2029.</p>
           <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2024</span>
           <h3>BNP Paribas — Volkswagen investit 122 milliards</h3>
           <p>Volkswagen annonce un budget colossal pour l'électrification et la digitalisation, avec l'IA au cœur de sa stratégie industrielle.</p>
           <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2025</span>
           <h3>Automobile Propre — IA et autonomie en temps réel</h3>
           <p>Des chercheurs développent un modèle IA capable d'estimer l'autonomie restante d'un VE en analysant topographie, météo, vitesse et état de la batterie.</p>
           <a href="https://www.automobile-propre.com/articles/autonomie-des-voitures-electriques-cette-ia-promet-des-estimations-beaucoup-plus-fiables-que-le-wltp/" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
         <div class="veille-card">
           <span class="source-badge badge-year">2025</span>
           <h3>Automobile Propre — L'IA dessine les futurs VE</h3>
           <p>L'IA générative s'invite dans le processus de conception des voitures électriques, transformant le design et l'ingénierie automobile de demain.</p>
           <a href="https://www.automobile-propre.com/articles/les-prochaines-voitures-electriques-vont-elles-etre-dessinees-par-lia/" target="_blank" class="btn-news">Lire l'article</a>
         </div>
-
       </div>
     </section>
   </div>
@@ -860,10 +853,6 @@
   const btn = document.getElementById('back-to-top');
   window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-</script>
-
-</body>
-</html>
 </script>
 
 </body>
