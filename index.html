@@ -218,7 +218,29 @@
     .project-accent-teal   { border-left: 5px solid #16a085; }
     .project-accent-red    { border-left: 5px solid #e74c3c; }
 
-    .project-img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-top: 14px; border: 1px solid #eee; }
+    /* ── IMAGE PROJET MODIFIÉE ── */
+    .project-img-link { display: inline-block; margin-top: 14px; cursor: zoom-in; }
+    .project-img {
+      width: 180px; height: 120px;
+      object-fit: cover; border-radius: 8px;
+      border: 1px solid #ddd; transition: 0.25s;
+      display: block;
+    }
+    .project-img:hover { opacity: 0.85; transform: scale(1.03); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 10px; box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 28px;
+      color: white; font-size: 2em; cursor: pointer;
+      font-weight: bold; line-height: 1;
+    }
 
     .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .about-card { background: #fdfdfd; border: 1px solid #eee; border-radius: 10px; padding: 22px; }
@@ -290,6 +312,12 @@
 <div id="progress-bar"></div>
 <button id="back-to-top" title="Retour en haut">↑</button>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <nav>
   <a onclick="showPage('home')"         data-page="home">🏠 Accueil</a>
   <a onclick="showPage('presentation')" data-page="presentation">Présentation</a>
@@ -354,7 +382,7 @@
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
+      <a href="mailto:mohmohlamoh8@gmail.com">✉️ mohmohalamoh8@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -544,7 +572,7 @@
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
+      <a href="mailto:mohmohlamoh8@gmail.com">✉️ mohmohlamoh8@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -621,7 +649,9 @@
           </div>
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
-        <img src="Capture_d_écran_2026-03-24_150601.png" alt="Dashboard Pi-hole" class="project-img">
+        <a class="project-img-link" onclick="openLightbox('pi-hole.png.png')">
+          <img src="pi-hole.png.png" alt="Dashboard Pi-hole" class="project-img">
+        </a>
       </div>
 
       <div class="project-fiche project-accent-red">
@@ -638,14 +668,16 @@
           </div>
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
-        <img src="IMG_7431.png" alt="Caméra Tapo C222 en classe" class="project-img">
+        <a class="project-img-link" onclick="openLightbox('IMG_7431.png')">
+          <img src="IMG_7431.png" alt="Caméra Tapo C222 en classe" class="project-img">
+        </a>
       </div>
 
     </section>
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
+      <a href="mailto:mohmohlamoh@gmail.com">✉️ mohmohlamoh8@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -842,6 +874,20 @@
   }
 
   triggerReveal('home');
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-img').src = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
 
   const bar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {
