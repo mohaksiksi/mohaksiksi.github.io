@@ -218,29 +218,14 @@
     .project-accent-teal   { border-left: 5px solid #16a085; }
     .project-accent-red    { border-left: 5px solid #e74c3c; }
 
-    /* ── IMAGE PROJET MODIFIÉE ── */
     .project-img-link { display: inline-block; margin-top: 14px; cursor: zoom-in; }
-    .project-img {
-      width: 180px; height: 120px;
-      object-fit: cover; border-radius: 8px;
-      border: 1px solid #ddd; transition: 0.25s;
-      display: block;
-    }
+    .project-img { width: 180px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; transition: 0.25s; display: block; }
     .project-img:hover { opacity: 0.85; transform: scale(1.03); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
 
-    /* ── LIGHTBOX ── */
-    .lightbox {
-      display: none; position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
-      cursor: zoom-out;
-    }
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; cursor: zoom-out; }
     .lightbox.open { display: flex; }
     .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 10px; box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
-    .lightbox-close {
-      position: absolute; top: 20px; right: 28px;
-      color: white; font-size: 2em; cursor: pointer;
-      font-weight: bold; line-height: 1;
-    }
+    .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2em; cursor: pointer; font-weight: bold; line-height: 1; }
 
     .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .about-card { background: #fdfdfd; border: 1px solid #eee; border-radius: 10px; padding: 22px; }
@@ -272,16 +257,28 @@
     .interet-nom  { font-weight: 700; font-size: 0.88em; color: #2c3e50; margin-bottom: 4px; }
     .interet-desc { font-size: 0.75em; color: #666; }
 
-    .veille-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .veille-card { background: #ffffff; border: 2px solid #eef2f6; border-radius: 12px; padding: 25px; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+    .veille-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .veille-card {
+      background: #ffffff; border: 2px solid #eef2f6; border-radius: 12px;
+      padding: 25px; text-align: left; transition: 0.3s;
+      display: flex; flex-direction: column; gap: 10px;
+    }
     .veille-card:hover { transform: translateY(-8px); border-color: #2980b9; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    .veille-card h3 { color: #2c3e50; font-size: 1.1em; }
-    .veille-card p { font-size: 0.88em; color: #666; flex: 1; }
-    .source-badge { font-size: 0.7em; font-weight: bold; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; align-self: center; }
+    .veille-card h3 { color: #2c3e50; font-size: 1.05em; font-weight: 700; }
+    .veille-card .resume { font-size: 0.85em; color: #555; line-height: 1.6; }
+    .veille-card .key-facts { background: #f8fafd; border-left: 4px solid #2980b9; border-radius: 6px; padding: 10px 14px; margin-top: 4px; }
+    .veille-card .key-facts ul { list-style: none; padding: 0; margin: 0; }
+    .veille-card .key-facts ul li { font-size: 0.78em; color: #2c3e50; padding: 3px 0; display: flex; align-items: flex-start; gap: 6px; }
+    .veille-card .key-facts ul li::before { content: '📌'; flex-shrink: 0; }
+    .source-badge { font-size: 0.7em; font-weight: bold; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; align-self: flex-start; }
     .badge-fr   { background: #e3f2fd; color: #1976d2; }
     .badge-year { background: #f3e5f5; color: #6a1b9a; }
-    .btn-news { background: #2980b9; color: white !important; padding: 10px 20px; border-radius: 8px; text-decoration: none !important; font-size: 0.9em; font-weight: bold; transition: 0.3s; }
+    .btn-news { background: #2980b9; color: white !important; padding: 10px 20px; border-radius: 8px; text-decoration: none !important; font-size: 0.85em; font-weight: bold; transition: 0.3s; text-align: center; }
     .btn-news:hover { background: #1a5276; }
+
+    .synthese-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; display: block; margin: 0 auto 20px; }
+    .btn-green { background: #27ae60 !important; }
+    .btn-green:hover { background: #1e8449 !important; }
 
     footer { text-align: center; padding: 30px 20px; background: #2c3e50; color: #ecf0f1; }
     .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -312,7 +309,6 @@
 <div id="progress-bar"></div>
 <button id="back-to-top" title="Retour en haut">↑</button>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
   <img id="lightbox-img" src="" alt="">
@@ -358,7 +354,7 @@
     <div class="home-card" onclick="showPage('experience')">
       <div class="home-card-icon">🚇</div>
       <div class="home-card-title">Expérience</div>
-      <div class="home-card-desc">Mon alternance à la RATP, mes missions et mes certifications obtenues.</div>
+      <div class="home-card-desc">Mon alternance à la RATP, mes missions, certifications et tableau de synthèse.</div>
       <div class="home-card-arrow">→</div>
     </div>
     <div class="home-card" onclick="showPage('projets')">
@@ -376,13 +372,13 @@
     <div class="home-card" onclick="showPage('veille')">
       <div class="home-card-icon">📡</div>
       <div class="home-card-title">Veille Technologique</div>
-      <div class="home-card-desc">Ma veille sur l'IA et l'évolution des véhicules électriques — 10 articles de 2020 à 2025.</div>
+      <div class="home-card-desc">Ma veille sur l'IA et les véhicules électriques — 10 articles de sept. 2024 à avril 2026.</div>
       <div class="home-card-arrow">→</div>
     </div>
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohmohlamoh8@gmail.com">✉️ mohmohalamoh8@gmail.com</a>
+      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -497,7 +493,7 @@
 <div id="page-experience" class="page">
   <div class="page-header ph-experience">
     <h1>🚇 Expérience</h1>
-    <p>Alternance RATP · Missions · Certifications</p>
+    <p>Alternance RATP · Missions · Certifications · Synthèse</p>
   </div>
   <div class="container">
     <section class="reveal">
@@ -569,10 +565,17 @@
         </div>
       </div>
     </section>
+    <section class="reveal">
+      <h2>Tableau de Synthèse des Réalisations</h2>
+      <div style="text-align:center;margin-top:20px;">
+        <img src="image_8eeef5.jpg" alt="Tableau de synthèse BTS SIO" class="synthese-img">
+        <a href="tableau de synthèse portfolio.jpg.xlsx" target="_blank" class="btn-news btn-green">🔍 Voir en plein écran</a>
+      </div>
+    </section>
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohmohlamoh8@gmail.com">✉️ mohmohlamoh8@gmail.com</a>
+      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -589,7 +592,6 @@
   <div class="container">
     <section class="reveal">
       <h2>Fiches Projets</h2>
-
       <div class="project-fiche project-accent-blue">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -604,7 +606,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-orange">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -619,7 +620,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-purple">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -634,7 +634,6 @@
           <span class="status-badge status-done">✅ Réalisé</span>
         </div>
       </div>
-
       <div class="project-fiche project-accent-teal">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -653,7 +652,6 @@
           <img src="pi-hole.png.png" alt="Dashboard Pi-hole" class="project-img">
         </a>
       </div>
-
       <div class="project-fiche project-accent-red">
         <div class="project-fiche-inner">
           <div style="flex:1">
@@ -672,12 +670,11 @@
           <img src="IMG_7431.png" alt="Caméra Tapo C222 en classe" class="project-img">
         </a>
       </div>
-
     </section>
   </div>
   <footer>
     <div class="footer-links">
-      <a href="mailto:mohmohlamoh@gmail.com">✉️ mohmohlamoh8@gmail.com</a>
+      <a href="mailto:mohaksiksi@gmail.com">✉️ mohaksiksi@gmail.com</a>
       <a href="https://www.linkedin.com/in/mohamed-ksiksi-20992736b/" target="_blank">💼 LinkedIn</a>
       <a href="CV.pdf">📄 CV</a>
     </div>
@@ -765,72 +762,153 @@
 <div id="page-veille" class="page">
   <div class="page-header ph-veille">
     <h1>📡 Veille Technologique</h1>
-    <p>IA & Véhicules Électriques · 10 articles · 2020 – 2025</p>
+    <p>IA & Véhicules Électriques · 10 articles · Sept. 2024 – Avril 2026</p>
   </div>
   <div class="container">
     <section class="reveal">
       <h2>L'IA et l'évolution des Véhicules Électriques</h2>
       <div class="veille-grid">
+
         <div class="veille-card">
-          <span class="source-badge badge-year">2020</span>
-          <h3>EDF — La voiture électrique du futur</h3>
-          <p>Présentation des premières technologies de recharge intelligente (V1G/V2G) et de la conduite autonome assistée par IA.</p>
-          <a href="https://particulier.edf.fr/fr/accueil/guide-energie/electricite/future-voiture-electrique.html" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2021</span>
-          <h3>BNP Paribas — L'IA dans l'automobile</h3>
-          <p>Honda commercialise le premier système de conduite autonome de niveau 3 au Japon, suivi de Mercedes en Allemagne.</p>
-          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2022</span>
-          <h3>Daze — 7 avantages de l'IA dans les VE</h3>
-          <p>Depuis juillet 2022, certains systèmes d'aide à la conduite basés sur l'IA sont obligatoires pour les nouveaux véhicules homologués dans l'UE.</p>
-          <a href="https://www.daze.eu/fr-be/blog/intelligence-artificielle-ev-avantages" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2022</span>
-          <h3>Beev — L'avenir de l'IA dans l'automobile propre</h3>
-          <p>Le rapport de sécurité Tesla T4 2022 montre que l'Autopilot réduit drastiquement les accidents grâce à l'IA embarquée.</p>
-          <a href="https://www.beev.co/blog/voitures-electriques/quel-avenir-pour-lintelligence-artificielle-dans-lautomobile-propre/" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2023</span>
-          <h3>BNP Paribas — Honda/Sony lancent Afeela</h3>
-          <p>Le prototype Afeela embarque 45 capteurs (LiDARs, caméras) et une plateforme numérique pilotée par l'IA connectée en 5G.</p>
-          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2023</span>
-          <h3>BPI France — L'IA, moteur de la révolution automobile</h3>
-          <p>Les algorithmes de machine learning analysent les habitudes de conduite pour réduire la consommation et personnaliser l'expérience utilisateur.</p>
-          <a href="https://bigmedia.bpifrance.fr/nos-dossiers/lia-moteur-de-la-revolution-du-secteur-automobile" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2024</span>
-          <h3>BNP Paribas — Marché de la voiture autonome</h3>
-          <p>Le marché des véhicules autonomes est estimé à 41 milliards de dollars en 2024, avec une croissance de 22,75 % prévue jusqu'en 2029.</p>
-          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2024</span>
-          <h3>BNP Paribas — Volkswagen investit 122 milliards</h3>
-          <p>Volkswagen annonce un budget colossal pour l'électrification et la digitalisation, avec l'IA au cœur de sa stratégie industrielle.</p>
-          <a href="https://group.bnpparibas/actualite/lintelligence-artificielle-moteur-de-la-transformation-de-lautomobile" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2025</span>
-          <h3>Automobile Propre — IA et autonomie en temps réel</h3>
-          <p>Des chercheurs développent un modèle IA capable d'estimer l'autonomie restante d'un VE en analysant topographie, météo, vitesse et état de la batterie.</p>
-          <a href="https://www.automobile-propre.com/articles/autonomie-des-voitures-electriques-cette-ia-promet-des-estimations-beaucoup-plus-fiables-que-le-wltp/" target="_blank" class="btn-news">Lire l'article</a>
-        </div>
-        <div class="veille-card">
-          <span class="source-badge badge-year">2025</span>
+          <span class="source-badge badge-year">Sept. 2024</span>
           <h3>Automobile Propre — L'IA dessine les futurs VE</h3>
-          <p>L'IA générative s'invite dans le processus de conception des voitures électriques, transformant le design et l'ingénierie automobile de demain.</p>
+          <p class="resume">Le patron du design chez Mercedes affirme que l'IA va transformer radicalement la conception automobile. Selon lui, d'ici 10 ans, la majorité du design sera réalisé par des machines, remplaçant progressivement les designers humains.</p>
+          <div class="key-facts">
+            <ul>
+              <li>D'ici 10 ans, la majorité du design automobile sera réalisé par l'IA</li>
+              <li>L'IA détecte déjà les défauts de fabrication avec 90 % de précision</li>
+              <li>Les robots automatisent les lignes de production dans la plupart des usines</li>
+            </ul>
+          </div>
           <a href="https://www.automobile-propre.com/articles/les-prochaines-voitures-electriques-vont-elles-etre-dessinees-par-lia/" target="_blank" class="btn-news">Lire l'article</a>
         </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Oct. 2024</span>
+          <h3>VEA.fr — Les technologies auto 2024</h3>
+          <p class="resume">2024 marque une accélération majeure de l'IA dans l'automobile. Stellantis s'associe à Qualcomm pour concevoir trois plateformes intelligentes qui transforment l'expérience de conduite et la connectivité des véhicules.</p>
+          <div class="key-facts">
+            <ul>
+              <li>Stellantis x Qualcomm : STLA Brain, SmartCockpit et AutoDrive</li>
+              <li>Intégration Apple CarPlay, Android Auto et commandes vocales IA</li>
+              <li>Mercedes et Audi lancent des fonctions ADAS toujours plus avancées</li>
+            </ul>
+          </div>
+          <a href="https://www.vea.fr/focus-sur-les-nouvelles-technologies-auto-2024/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Déc. 2024</span>
+          <h3>IBM — Automotive 2035 : l'IA au cœur des VE</h3>
+          <p class="resume">L'IBM Institute for Business Value publie une étude mondiale interrogeant 1 230 cadres automobiles. Elle révèle que l'industrie se transforme profondément autour des véhicules définis par logiciel (SDV) et de l'IA.</p>
+          <div class="key-facts">
+            <ul>
+              <li>74 % des dirigeants : les VE intégreront l'IA d'ici 2035</li>
+              <li>80 % des nouvelles voitures seront électrifiées d'ici 2035</li>
+              <li>75 % : l'expérience logicielle sera au cœur de la valeur de marque</li>
+            </ul>
+          </div>
+          <a href="https://fr.newsroom.ibm.com/Lindustrie-automobile-en-plein-changement-80-des-vehicules-seront-evolutifs-par-les-mises-a-jour-des-logiciels-qui-le-constituent-et-integreront-de-lintelligence-artificielle-a-lhorizon-2035" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Jan. 2025</span>
+          <h3>Wavestone — L'IA au secours de l'automobile</h3>
+          <p class="resume">Face à la fragmentation des marchés mondiaux, les constructeurs automobiles misent sur l'IA pour adapter leurs stratégies localement. La Chine représente déjà 25 % du marché VE en 2025, forçant une réorganisation globale.</p>
+          <div class="key-facts">
+            <ul>
+              <li>25 % du marché automobile chinois est électrique en 2025</li>
+              <li>L'IA permet de personnaliser les offres selon chaque région</li>
+              <li>L'interopérabilité des données reste un défi majeur pour les constructeurs</li>
+            </ul>
+          </div>
+          <a href="https://www.wavestone.com/fr/insight/2025-dans-le-secteur-automobile-lia-au-secours-dune-regionalisation-inevitable/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Jan. 2025</span>
+          <h3>Automobile Propre — IA et autonomie en temps réel</h3>
+          <p class="resume">Des chercheurs ont développé un modèle IA entraîné sur 2 000 scénarios de conduite synthétiques pour estimer l'autonomie réelle d'un VE, bien plus précisément que le cycle WLTP officiel.</p>
+          <div class="key-facts">
+            <ul>
+              <li>Modèle entraîné sur ~2 000 scénarios de conduite synthétiques</li>
+              <li>Prise en compte : topographie, météo, vitesse, état de la batterie</li>
+              <li>Objectif : identifier les conditions de conduite optimales</li>
+            </ul>
+          </div>
+          <a href="https://www.automobile-propre.com/articles/autonomie-des-voitures-electriques-cette-ia-promet-des-estimations-beaucoup-plus-fiables-que-le-wltp/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Fév. 2025</span>
+          <h3>Punch Powertrain — L'IA moteur des VE</h3>
+          <p class="resume">Punch Powertrain exploite le machine learning pour créer des jumeaux numériques de ses systèmes électriques, réduisant les coûts de prototypage et améliorant la qualité des véhicules hybrides et électriques.</p>
+          <div class="key-facts">
+            <ul>
+              <li>ConACon : logiciel de conduite prédictive basé sur le machine learning</li>
+              <li>Jumeaux numériques pour éliminer les prototypes physiques A et B</li>
+              <li>L'IA améliore le processus d'assemblage en fin de chaîne de production</li>
+            </ul>
+          </div>
+          <a href="https://punchpowertrain.com/fr/news/lia-moteur-des-vehicules-electriques/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Mars 2025</span>
+          <h3>Actualidad Motor — L'avenir de l'automobile 2025</h3>
+          <p class="resume">En 2025, la voiture électrique devient enfin accessible au grand public. Les prix ont chuté de 30 % et plus de 70 % des nouvelles voitures intègrent des fonctionnalités avancées d'IA, transformant le véhicule en plateforme intelligente connectée.</p>
+          <div class="key-facts">
+            <ul>
+              <li>Prix moyen des VE : baisse de plus de 30 % en 2025</li>
+              <li>70 % des nouvelles voitures intègrent des fonctionnalités IA avancées</li>
+              <li>Apple, Xiaomi, Sony et Huawei investissent massivement dans l'auto</li>
+            </ul>
+          </div>
+          <a href="https://fr.actualidadmotor.com/l'avenir-de-l'automobile-2025/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Juin 2025</span>
+          <h3>Wavestone — IA & régionalisation automobile</h3>
+          <p class="resume">L'IA s'impose comme levier stratégique pour répondre aux attentes locales des consommateurs. Elle permet d'optimiser la supply chain, de personnaliser les produits et d'améliorer l'efficacité opérationnelle à l'échelle mondiale.</p>
+          <div class="key-facts">
+            <ul>
+              <li>L'IA optimise la supply chain et réduit les délais de production</li>
+              <li>Les plateformes unifiées agrègent les données de différentes sources</li>
+              <li>L'Europe privilégie les petits VE subventionnés par des aides gouvernementales</li>
+            </ul>
+          </div>
+          <a href="https://www.wavestone.com/fr/insight/2025-dans-le-secteur-automobile-lia-au-secours-dune-regionalisation-inevitable/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Fév. 2026</span>
+          <h3>OnOff — IA & VE : la révolution auto de 2026</h3>
+          <p class="resume">En 2026, l'IA est omniprésente dans les VE : Tesla optimise ses batteries à distance, Mercedes intègre ChatGPT dans son système MBUX, et BMW personnalise l'habitacle selon les habitudes du conducteur grâce à l'apprentissage automatique.</p>
+          <div class="key-facts">
+            <ul>
+              <li>Tesla : +5 à 8 % d'efficacité batterie via mises à jour OTA sans changer de pièce</li>
+              <li>Mercedes MBUX alimenté par ChatGPT pour des requêtes en langage naturel</li>
+              <li>94 % des accidents dus à l'erreur humaine — l'IA pourrait sauver 1M de vies/an</li>
+            </ul>
+          </div>
+          <a href="https://www.onoff.gr/blog/fr/voitures-electriques/intelligence-artificielle-et-voitures-electriques-comment/" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
+        <div class="veille-card">
+          <span class="source-badge badge-year">Avril 2026</span>
+          <h3>La Centrale — IA et voitures autonomes en 2026</h3>
+          <p class="resume">En 2026, l'IA redéfinit complètement l'expérience de conduite électrique : navigation adaptative en temps réel, gestion prédictive de l'énergie, assistants vocaux en langage naturel et systèmes de sécurité autonomes s'imposent comme la nouvelle norme.</p>
+          <div class="key-facts">
+            <ul>
+              <li>Navigation IA : intègre charge batterie, météo, circulation et dénivelé en temps réel</li>
+              <li>Assistants vocaux en langage naturel remplacent les commandes robotisées</li>
+              <li>Conduite autonome de niveau 3 désormais légale en Allemagne, Japon et Nevada</li>
+            </ul>
+          </div>
+          <a href="https://www.lacentrale.fr/conseils/actualites/intelligence-artificielle-et-voitures-autonomes-2025" target="_blank" class="btn-news">Lire l'article</a>
+        </div>
+
       </div>
     </section>
   </div>
