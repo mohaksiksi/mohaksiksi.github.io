@@ -144,6 +144,29 @@
     .formation-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.1em; }
     .formation-card p { color: #555; margin-bottom: 8px; }
 
+    /* BTS SIO */
+    .bts-intro { background: #f8fafd; border: 1px solid #e0eaf5; border-radius: 10px; padding: 22px; margin-bottom: 20px; text-align: center; }
+    .bts-intro h3 { color: #2c3e50; font-size: 1.2em; margin-bottom: 8px; }
+    .bts-intro p { color: #555; font-size: 0.92em; line-height: 1.7; }
+    .bts-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+    .bts-option-card { border-radius: 12px; padding: 24px; border: 2px solid; }
+    .bts-option-card.sisr { border-color: #2980b9; background: linear-gradient(135deg, #eaf4fb, #ffffff); }
+    .bts-option-card.slam { border-color: #8e44ad; background: linear-gradient(135deg, #f5eef8, #ffffff); }
+    .bts-option-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .bts-option-icon { font-size: 2em; }
+    .bts-option-title { font-size: 1.1em; font-weight: 700; }
+    .bts-option-card.sisr .bts-option-title { color: #2980b9; }
+    .bts-option-card.slam .bts-option-title { color: #8e44ad; }
+    .bts-option-subtitle { font-size: 0.78em; color: #888; }
+    .bts-option-desc { font-size: 0.88em; color: #555; line-height: 1.7; margin-bottom: 14px; }
+    .bts-option-skills { list-style: none; padding: 0; }
+    .bts-option-skills li { font-size: 0.82em; color: #444; padding: 5px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 8px; }
+    .bts-option-skills li:last-child { border-bottom: none; }
+    .bts-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.72em; font-weight: bold; margin-top: 14px; }
+    .bts-badge.sisr { background: #e3f2fd; color: #1565c0; }
+    .bts-badge.slam { background: #f3e5f5; color: #6a1b9a; }
+    .bts-badge.active { background: #e8f5e9; color: #2e7d32; }
+
     #skills-bg { background-size: cover; background-position: center; background-image: url('https://image.pollinations.ai/prompt/digital-grid-tech'); }
     #skills-bg::before { content: ''; position: absolute; inset: 0; background: rgba(44,62,80,0.88); z-index: 1; }
     #skills-bg .content { position: relative; z-index: 2; }
@@ -342,7 +365,7 @@
     <div class="home-card" onclick="showPage('presentation')">
       <div class="home-card-icon">👤</div>
       <div class="home-card-title">Présentation</div>
-      <div class="home-card-desc">Qui je suis, mon parcours académique et ma formation actuelle en alternance à la RATP.</div>
+      <div class="home-card-desc">Qui je suis, mon parcours académique, ma formation et le BTS SIO.</div>
       <div class="home-card-arrow">→</div>
     </div>
     <div class="home-card" onclick="showPage('competences')">
@@ -390,9 +413,10 @@
 <div id="page-presentation" class="page">
   <div class="page-header ph-presentation">
     <h1>👤 Présentation</h1>
-    <p>Qui je suis · Mon parcours · Ma formation</p>
+    <p>Qui je suis · Mon parcours · Ma formation · BTS SIO</p>
   </div>
   <div class="container">
+
     <section class="reveal">
       <h2>Présentation</h2>
       <div class="intro-section">
@@ -406,6 +430,7 @@
         </div>
       </div>
     </section>
+
     <section class="reveal">
       <h2>Mon Parcours Académique</h2>
       <ul class="timeline">
@@ -415,6 +440,7 @@
         <li><strong>2024 – Aujourd'hui</strong><br>UTEC Marne-la-Vallée — <strong>BTS SIO SISR</strong> (Alternance)</li>
       </ul>
     </section>
+
     <section class="reveal">
       <h2>Ma Formation Actuelle</h2>
       <div class="formation-card">
@@ -423,6 +449,62 @@
         <p>Je réalise mon alternance à la <strong>RATP</strong>, au sein du service <strong>Proximité Data Center</strong>, au rythme d'<strong>1 semaine sur 2</strong>.</p>
       </div>
     </section>
+
+    <!-- ══ SECTION BTS SIO ══ -->
+    <section class="reveal">
+      <h2>Le BTS SIO — Services Informatiques aux Organisations</h2>
+
+      <div class="bts-intro">
+        <h3>🎓 Qu'est-ce que le BTS SIO ?</h3>
+        <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac+2 qui forme des professionnels de l'informatique capables de répondre aux besoins des entreprises en matière de systèmes d'information. Il se prépare en 2 ans et se décline en <strong>deux options</strong> selon le domaine de spécialisation choisi.</p>
+      </div>
+
+      <div class="bts-options">
+
+        <div class="bts-option-card sisr">
+          <div class="bts-option-header">
+            <div class="bts-option-icon">🌐</div>
+            <div>
+              <div class="bts-option-title">Option SISR</div>
+              <div class="bts-option-subtitle">Solutions d'Infrastructure, Systèmes et Réseaux</div>
+            </div>
+          </div>
+          <p class="bts-option-desc">L'option SISR forme des techniciens capables de déployer, administrer et sécuriser les infrastructures informatiques d'une organisation : serveurs, réseaux, postes de travail et systèmes de sécurité.</p>
+          <ul class="bts-option-skills">
+            <li>🔧 Administration des serveurs Windows & Linux</li>
+            <li>🌐 Configuration des réseaux (VLAN, routage, DNS, DHCP)</li>
+            <li>🔒 Sécurisation des systèmes (firewall, ACL, VPN)</li>
+            <li>☁️ Virtualisation (Proxmox, VirtualBox, VMware)</li>
+            <li>🛠️ Support et maintenance des infrastructures</li>
+            <li>📊 Supervision et monitoring des équipements réseau</li>
+          </ul>
+          <span class="bts-badge sisr">Infrastructure & Réseaux</span>
+          <span class="bts-badge active">✅ Mon option</span>
+        </div>
+
+        <div class="bts-option-card slam">
+          <div class="bts-option-header">
+            <div class="bts-option-icon">💻</div>
+            <div>
+              <div class="bts-option-title">Option SLAM</div>
+              <div class="bts-option-subtitle">Solutions Logicielles et Applications Métiers</div>
+            </div>
+          </div>
+          <p class="bts-option-desc">L'option SLAM forme des développeurs capables de concevoir, coder et déployer des applications logicielles adaptées aux besoins métiers des organisations, en utilisant différents langages et frameworks.</p>
+          <ul class="bts-option-skills">
+            <li>🖥️ Développement web (HTML, CSS, JavaScript, PHP)</li>
+            <li>📱 Développement d'applications mobiles</li>
+            <li>🗄️ Gestion de bases de données (SQL, MySQL, PostgreSQL)</li>
+            <li>🔄 Conception orientée objet (Java, Python, C#)</li>
+            <li>🧪 Tests et débogage d'applications</li>
+            <li>📋 Gestion de projet et méthodes agiles (Scrum)</li>
+          </ul>
+          <span class="bts-badge slam">Développement & Applicatif</span>
+        </div>
+
+      </div>
+    </section>
+
   </div>
   <footer>
     <div class="footer-links">
@@ -569,7 +651,7 @@
       <h2>Tableau de Synthèse des Réalisations</h2>
       <div style="text-align:center;margin-top:20px;">
         <img src="image_8eeef5.jpg" alt="Tableau de synthèse BTS SIO" class="synthese-img">
-        <a href="tableau de synthèse portfolio.jpg.xlsx" target="_blank" class="btn-news btn-green">🔍 Voir en plein écran</a>
+        <a href="tableau_de_synthèse_corrigé.xlsx" target="_blank" class="btn-news btn-green">🔍 Voir en plein écran</a>
       </div>
     </section>
   </div>
